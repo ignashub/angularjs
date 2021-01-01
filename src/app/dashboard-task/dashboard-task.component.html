@@ -1,0 +1,16 @@
+<div id="wrapper">
+    <ul class="tasks">
+        <li *ngFor="let task of tasksAPI; let i=index" 
+            [class.selected]="task === selectedTask"
+            (click)="onSelect(task)">
+            <span class="badge">{{task.id}}</span>
+            {{task.name}}
+            <div class="btn-update">
+                <button class="btn btn-primary pull-right" (click)="showDialog = !showDialog">Update</button>
+            </div>
+        </li>
+    </ul>
+        <app-task-detail [task]="selectedTask" [(visible)]="showDialog"></app-task-detail>
+
+</div>
+      

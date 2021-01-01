@@ -1,0 +1,17 @@
+<div id="wrapper">
+    
+        <app-employee-panel></app-employee-panel>
+        <ul class="employees">
+
+            <li *ngFor="let employee of empsAPI; let i=index" 
+                [class.selected]="employee === selectedEmployee"
+                (click)="onSelect(employee)">
+                <span class="badge">{{employee.id}}</span>
+                {{employee.first_name}}, {{employee.last_name}} 
+                <button class="btn btn-primary pull-right" (click)="showDialog = !showDialog">Update</button>
+                <button class="btn btn-danger pull-right" (click) = "onRemoveFromApi(employee); onRemoveEmployee(employee.first_name)">x</button>
+            </li>
+        </ul>
+            <app-employee-detail [employee]="selectedEmployee" [(visible)]="showDialog"></app-employee-detail>
+    
+</div>

@@ -1,0 +1,41 @@
+<nav class="sidenav  navy">
+  <div class="container-fluid">
+      <div class="navbar-brand goUp"> <h1>Web2</h1> </div>
+      <ul class="noDots">
+          <li 
+          [ngClass]="{'selected': formDashboardShowing}">
+          <a class="glyphicon glyphicon-equalizer" routerLink="/dashboard" (click)='onShowDashBoard()'> Dashboard</a>
+        </li>
+        <li >
+          <a class="glyphicon glyphicon-calendar" routerLink="/calender" (click)='onShowCalender()'> Calender</a>
+        </li>
+        <li 
+          [ngClass]="{'selected': formTaskShowing}">
+          <a class="glyphicon glyphicon-ok" routerLink="/task" (click)='onShowTask()'> Task</a>
+        </li>
+        <li 
+          [ngClass]="{'selected': formDepartmentShowing}">
+          <a class="glyphicon glyphicon-briefcase" routerLink="/department" (click)='onShowDepartment()'> Department</a>
+        </li>
+        <li 
+          [ngClass]="{'selected': formEmployeeShowing}">
+          <a class="glyphicon glyphicon-user" routerLink="/employee" (click)='onShowEmployee()'> Employees</a>
+        </li>
+    </ul>
+    <!--
+    <li class="colEd" >
+      <form class="form-inline mr-auto">
+          <input class="form-control mr-sm-2" [(ngModel)]="search" id="searchValue" [ngModelOptions]="{standalone: true}" type="text" placeholder="Search..." aria-label="Search">
+          <input class="btn btn-group-xs" value="Search" type="submit" (click) = getSearchAll() (click)="showDialog = !showDialog">
+      </form>
+    </li>
+    -->
+  </div>
+</nav>
+<router-outlet></router-outlet>
+<!--<app-department *ngIf="formDepartmentShowing"></app-department>
+<app-employee *ngIf="formEmployeeShowing"></app-employee>
+<app-dashboard-details *ngIf="formDashboardShowing"></app-dashboard-details>-->
+
+<app-department-detail [department]="searchDepartment" [(visible)]="showDialog"></app-department-detail>
+

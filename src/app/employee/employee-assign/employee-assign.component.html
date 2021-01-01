@@ -1,0 +1,53 @@
+<form class="creationForm">
+    <div class="form-group row">
+        <div class="col-md-7 col-centered" >
+            <input  
+            [(ngModel)] = 'empName'
+            [ngModelOptions]="{standalone: true}"
+            type="text" 
+            class="form-control" 
+            placeholder="First name"
+            >
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-7 col-centered" >
+            <input  
+            [(ngModel)] = 'empLastName'
+            [ngModelOptions]="{standalone: true}"
+            type="text" 
+            class="form-control" 
+            placeholder="Last name"
+            >
+        </div>
+    </div>
+    <div class="form-group row">
+            <div class="col-md-7 col-centered" >
+                <input  
+                [(ngModel)] = 'empDoB'
+                [ngModelOptions]="{standalone: true}"
+                type="text" 
+                class="form-control" 
+                placeholder="Date of birth yyyymmdd"
+                >
+            </div>
+        </div>
+    <div class="form-group row">
+        <div class="col-md-7 col-centered">
+            <select class="form-control" (change)="selectChangeHandler($event)" > 
+                <option hidden>Department</option>
+                    <option 
+                    *ngFor="let department of depsAPI"
+                    value="{{department.name}}">
+                    {{department.name}}
+                    </option>
+            </select>
+        </div>
+    </div>
+    <button 
+    class="btn btn-primary addButton pull-right" 
+    (click)="onAddEmployee()" 
+    [disabled]="empName ==='' || empDepartment == null"><!-- || department == null || employee == null-->
+    Add Employee
+    </button>
+</form>

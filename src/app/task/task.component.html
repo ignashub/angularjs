@@ -1,0 +1,18 @@
+<div id="wrapper">
+        <app-task-panel></app-task-panel>
+        <ul class="tasks">
+            <li *ngFor="let task of tasksAPI; let i=index" 
+                [class.selected]="task === selectedTask"
+                (click)="setSelectedTask(task)">
+                <span class="badge">{{task.id}}</span>
+                {{task.name}}    Due date: {{task.due_date}}
+                <div class="btn-update">
+                    <button class="btn btn-primary pull-right" (click)="showDialog = !showDialog; setSelectedTask(task)">Update</button>
+                    <button class="btn btn-danger pull-right" (click) = "onRemoveFromApi(task);  onRemoveTask(task.name)">X</button>
+                </div>
+                
+            </li>
+        </ul>
+        <app-task-detail [task]="selectedTask" [(visible)]="showDialog"></app-task-detail>
+    </div>
+          

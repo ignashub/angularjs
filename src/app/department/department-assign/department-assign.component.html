@@ -1,0 +1,30 @@
+<title>Department assign</title>
+<form class="creationForm">
+    <div class="form-group row">
+        <div class="col-md-7 col-centered" >
+            <input  
+            [(ngModel)] = 'departmentName'
+            [ngModelOptions]="{standalone: true}"
+            type="text" 
+            class="form-control" 
+            placeholder="Department"
+            >
+        </div>
+        <div class="col-md-7 col-centered" >
+                <input  
+                [(ngModel)] = 'buildingID'
+                [ngModelOptions]="{standalone: true}"
+                type="text" 
+                class="form-control" 
+                placeholder="Building ID"
+                >
+        </div>
+    </div>
+
+    <button 
+    class="btn btn-primary addButton pull-right" 
+    (click)="onAddDepartment()" 
+    [disabled]="departmentName ===''"><!-- || department == null || employee == null-->
+    Add Department
+    </button>
+</form>

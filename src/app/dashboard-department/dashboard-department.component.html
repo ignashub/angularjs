@@ -1,0 +1,17 @@
+<div id="wrapper">
+        <ul class="departments">
+    
+                <li *ngFor="let department of depsAPI; let i=index" 
+                [class.selected]="department === selectedDepartment"
+                (click)="onSelect(department)">
+                    <span class="badge">{{department.id}}
+                    </span>
+                {{department.name}}
+                <div class="btn-update">
+                    <button class="btn btn-primary pull-right" (click)="showDialog = !showDialog">Update</button>
+                </div>
+            </li>
+        </ul>
+    <app-department-detail [department]="selectedDepartment" [(visible)]="showDialog" ></app-department-detail>
+</div>
+    

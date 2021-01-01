@@ -1,0 +1,41 @@
+<div class="dashboard">
+        <h1>{{title | uppercase}}</h1>
+        <div class="container">
+            <div class="row">
+                
+            </div>
+            <div class="row dashcard">
+                <div class="col-md-6 col-centered boxBackground">
+                    <h1>Tasks</h1>
+                    <div class="col-md-12 col-centered infoBox">
+                        <app-dashboard-task></app-dashboard-task>
+                    </div>
+                </div>
+            </div>
+            <p></p>
+            <div class="row dashcard">
+                <div class="col-md-6 col-centered boxBackground">
+                    <h1>Departments</h1>
+                    <div class="col-md-12 col-centered infoBox">
+                        <app-dashboard-department></app-dashboard-department>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row dashcard">
+                <div class="col-md-6 col-centered boxBackground">
+                    <h1>Employees</h1>
+                    <div class="col-md-12 col-centered infoBox">
+                        <app-dashboard-employee></app-dashboard-employee>
+                    </div>
+                </div>
+            </div>
+        
+               
+            
+            <app-task-detail [task]="searchedTask"></app-task-detail>
+            <app-department-detail [department]="searchedDep"></app-department-detail>
+            <app-employee-detail [employee]="searchedEmp"></app-employee-detail>
+        </div>
+        
+</div>

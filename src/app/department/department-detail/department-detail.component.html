@@ -1,0 +1,15 @@
+<div *ngIf="department">
+    <title>Department details</title>
+
+    <h2>{{department.department | uppercase}} Details</h2>
+    <div><span>id: </span>{{department.id}}</div>
+    <div>
+      <label>Department:
+        <input [(ngModel)]="department.name" value="{{department.name}}" placeholder="name"/>
+      </label>
+    <p> <label>Employee:
+      {{department.employee}}
+      </label>
+    </p> 
+    </div>
+</div>

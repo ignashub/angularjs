@@ -1,0 +1,20 @@
+<div [@dialog] *ngIf="visible" class="dialog">
+  <h2>{{employee.first_name | uppercase}} Details</h2>
+    <div><span>id: </span>{{employee.id}}</div>
+    <div>
+      <label>Department ID :
+        <label>{{employee.department_id}}</label>
+      </label>
+        <p> 
+          <label>Employee first name:
+            <input [(ngModel)]="employee.first_name" class="form-control" value="{{employee.first_name}}" type="text">
+          </label>
+          <br>
+          <label>Employee last name:
+              <input [(ngModel)]="employee.last_name" class="form-control" value="{{employee.last_name}}" type="text">
+          </label>
+        </p> 
+  </div>
+  <button *ngIf="closable" (click)="close()" aria-label="Close" class="dialog__close-btn">Save</button>
+</div>
+<div *ngIf="visible" class="overlay" (click)="close()"></div>

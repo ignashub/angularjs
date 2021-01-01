@@ -1,0 +1,25 @@
+<title>Employee</title>
+<div class="row">
+    <div class="col-xs-4 col-centered">
+        <div class="panel-heading">
+            <div class="row justify-content-center">
+                <div class="col-md-6" >
+                    <button  
+                        class="btn btn-success center-block" 
+                        (click) = 'onShowForm()'
+                        >New Employee
+                    </button>
+                </div>
+                <div class="col-md-6" >
+                    <form class="form-inline mr-auto">
+                        <input class="form-control mr-sm-2" [(ngModel)]="search" id="searchValue" [ngModelOptions]="{standalone: true}" type="text" placeholder="Search Employee" aria-label="Search">
+                        <input class="btn btn-group-xs" value="Search Employee" type="submit" (click) = getSearchEmployee() (click)="showDialog = !showDialog">
+                    </form>
+                </div>
+                <app-employee-assign *ngIf="formIsShowing"></app-employee-assign>
+            </div>
+        </div>
+    </div>
+</div>
+<app-employee-detail [employee]="searchEmployee" [(visible)]="showDialog"></app-employee-detail>
+

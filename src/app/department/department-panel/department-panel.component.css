@@ -1,0 +1,39 @@
+.panel-heading {
+  margin-top: 3%;
+  margin-right: auto;
+  margin-left: auto;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background-color: #525f7f;
+  box-shadow: 0 1px 20px 0 rgba(0,0,0,.1);
+  
+}
+.department_input {
+  margin-bottom: 3%;
+  margin-top: 3%;
+  margin-left: 17%;
+  width: 60%;
+
+  
+}
+
+.pull-right {
+  margin-top: 3%;
+  float: right !important;
+}
+
+.col-centered{
+  float: none;
+  margin: 0 auto;
+}
+
+.test{
+background-color: purple;
+}
+.test2{
+background-color: red;
+}
+.test3{
+background-color: blue;
+
+}

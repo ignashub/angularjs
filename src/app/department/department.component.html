@@ -1,0 +1,15 @@
+<title>Department</title>
+<div id="wrapper">
+    <app-department-panel></app-department-panel>
+    <ul class="departments">
+        <li *ngFor="let department of depsAPI; let i=index" 
+            [class.selected]="department === selectedDepartment"
+            (click)="onSelect(department)">
+            <span class="badge">{{department.id}}</span>
+            {{department.name}}
+            <button class="btn btn-primary pull-right" (click)="showDialog = !showDialog">Update</button>
+            <button class="btn btn-danger pull-right" (click) = "onRemoveFromApi(department); onRemoveDepartment(department.name)">x</button>
+        </li>
+    </ul>
+    <app-department-detail  [department]="selectedDepartment" [(visible)]="showDialog"></app-department-detail>
+</div>

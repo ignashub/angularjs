@@ -1,0 +1,35 @@
+.container{
+    margin-top: 3%;
+}
+.boxBackground{
+    background: #27293d;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    border-top-right-radius: 6px; 
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    margin-right: 110px;
+    color: rgba(255,255,255,.8);
+    box-shadow: 0 1px 20px 0 rgba(0,0,0,.1);
+}
+.infoBox{
+    background-color: #27293d;
+    color: #32325d;   
+}
+.dashcard{
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+.col-centered{
+    float: none;
+    margin: 0 auto;
+  }
+.infoBox:hover{
+    cursor: pointer;
+}
+.dashboard{
+    background-color: #212529;
+    margin-left: 15%;
+    color: lightslategray;
+}

@@ -1,0 +1,59 @@
+.selected{
+  cursor: default;
+  color: #ffffff;
+}
+.nav-Buttons{
+  cursor: pointer;
+}
+
+.dashboard{
+  background-color: #212529;
+}
+.navy{
+  background: linear-gradient(0deg,#ec250d 0,#fd5d93 100%);
+  color: rgba(255,255,255,.8);
+}
+.navybar{
+  color: rgba(255,255,255,.8);
+}
+.colEd {
+margin-top: -12px;
+margin-bottom: -50px;
+}
+.noDots{
+  list-style-type: none;
+}
+
+.goUp{
+  margin-top: -34px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 220px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: linear-gradient(0deg,#ec250d 0,#fd5d93 100%);;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding-top: 100px;
+  padding-bottom: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #ced4da;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f6f9fc;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

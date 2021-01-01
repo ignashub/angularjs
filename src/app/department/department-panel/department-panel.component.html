@@ -1,0 +1,25 @@
+<title>Department</title>
+<div class="row">
+    <div class="col-xs-4 col-centered">
+        <div class="panel-heading">
+            <div class="row justify-content-center">
+                <div class="col-md-6" >
+                    <button  
+                        class="btn btn-success center-block" 
+                        (click) = 'onShowForm()'
+                        >New Department
+                    </button>
+                </div>
+                <div class="col-md-6" >
+                    <form class="form-inline mr-auto">
+                        <input class="form-control mr-sm-2" [(ngModel)]="search" id="searchValue" [ngModelOptions]="{standalone: true}" type="text" placeholder="Search Department" aria-label="Search">
+                        <input class="btn btn-group-xs" value="Search Department" type="submit" (click) = getSearchDepartment() (click)="showDialog = !showDialog">
+                    </form>
+                </div>
+                <app-department-assign *ngIf="formIsShowing"></app-department-assign>
+            </div>
+        </div>
+    </div>
+</div>
+<app-department-detail [department]="searchDepartment" [(visible)]="showDialog"></app-department-detail>
+

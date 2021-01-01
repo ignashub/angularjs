@@ -1,0 +1,16 @@
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.creationForm{
+    margin-top: 3%;
+}
+
+.addButton{
+    margin-right: 3%;
+  }
+  .invalid-feedback{
+      color: red;
+      font-size: 10;
+  }
