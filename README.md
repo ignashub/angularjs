@@ -1,5 +1,4 @@
 ## Hera page!
-http://i413957.hera.fhict.nl/
 
 **Extra features**(these features were not requierd based on the WEB2 Practicals.pdf):
 - Calender component.
