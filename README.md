@@ -1,3 +1,5 @@
+A CRUD based web-application.
+
 **Extra features**:
 - Calender component.
 - Local storage functionality.
