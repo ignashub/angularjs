@@ -1,4 +1,4 @@
-**Extra features**(these features were not requierd based on the WEB2 Practicals.pdf):
+**Extra features**:
 - Calender component.
 - Local storage functionality.
 - Ability to see employees belonging to a certain department in Departments component.
