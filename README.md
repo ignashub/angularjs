@@ -1,5 +1,3 @@
-## Hera page!
-
 **Extra features**(these features were not requierd based on the WEB2 Practicals.pdf):
 - Calender component.
 - Local storage functionality.
